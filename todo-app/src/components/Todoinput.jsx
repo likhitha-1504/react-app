@@ -11,10 +11,10 @@ function Todoinput({addTodo}){
     }
     
     return(
-        <div>
-        <input type="text" placeholder="Enter your todo" 
-        value={todo} onChange={e=>setTodo(e.target.value)}/>
-        <button onClick={handleChange}>Add</button>
+        <div className="todo-input-container">
+        <input type="text" placeholder="Enter your todo..." className="todo-input"
+        value={todo} onChange={e=>setTodo(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleChange()}/>
+        <button className="btn-add" onClick={handleChange}>Add</button>
         </div>
     )
 }

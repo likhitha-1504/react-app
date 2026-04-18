@@ -15,11 +15,11 @@ function App(){
   }
 
   return(
-    <>
+    <div className="app-container">
     <Header/>
     <Todoinput addTodo={handleAddTodo}/>
     <TodoList todos={todos} deleteTodo={handleDeleteTodo}/>
-    </>
+    </div>
   )
 }
 export default App
